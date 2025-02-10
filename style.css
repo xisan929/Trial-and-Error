@@ -5,6 +5,9 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header Styles */
@@ -24,27 +27,34 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 10px 0 0;
-    display: flex; /* Use Flexbox */
-    justify-content: space-between; /* Spread items evenly */
+    display: flex;
+    justify-content: space-between;
 }
 
 nav ul li {
-    margin: 0; /* Remove margin-right */
+    margin: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px; /* Add padding for better clickability */
+    padding: 10px;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Container for Main Content and Dashboard */
+.container {
+    display: flex;
+    flex: 1; /* Take up remaining space */
+}
+
 /* Main Content Styles */
 main {
+    flex: 3; /* Take up 3 parts of the available space */
     padding: 20px;
 }
 
@@ -67,13 +77,46 @@ main {
     border-radius: 8px;
 }
 
+/* Dashboard Styles */
+.dashboard {
+    flex: 1; /* Take up 1 part of the available space */
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 1px solid #e0e0e0;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h2 {
+    margin-top: 0;
+    color: #6200ea;
+}
+
+.dashboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard ul li {
+    margin: 10px 0;
+}
+
+.dashboard ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dashboard ul li a:hover {
+    color: #6200ea;
+    text-decoration: underline;
+}
+
 /* Footer Styles */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    /* Remove position: fixed and add margin-top for spacing */
     position: static;
     margin-top: 20px;
 }
