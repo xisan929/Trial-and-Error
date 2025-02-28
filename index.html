@@ -33,8 +33,8 @@
             <!-- Image Box -->
             <div class="image-box">
                 <h2>Image Display</h2>
-                <img src="images/Forrest view.jpg" alt="My Image 1">
-                <img src="images/The_Death_of_Socrates.jpg" alt="My Image 2">
+                <img src="images/Forrest view.jpg" alt="My Image 1" loading="lazy">
+                <img src="images/The_Death_of_Socrates.jpg" alt="My Image 2" loading="lazy">
             </div>
         </main>
 
@@ -51,9 +51,17 @@
         </aside>
     </div>
 
+    <div class="user-input">
+        <h2>Leave a Comment</h2>
+        <textarea id="userComment" placeholder="Enter your comment here..."></textarea>
+        <button onclick="displayComment()">Submit</button>
+        <div id="commentDisplay"></div>
+    </div>
+
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Trial & Error. All rights reserved.</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
 </body>
 </html>
